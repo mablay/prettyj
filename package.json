@@ -8,6 +8,10 @@
     "pp": "cat ./package.json | node ./index.js",
     "test": "./test/test.sh"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/pisquared/prettyj.git"
+  },
   "keywords": ["json", "pretty", "prettify", "bash", "shell", "cli", "pipe", "format"],
   "author": "Marc Ablay",
   "license": "MIT",
