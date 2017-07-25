@@ -1,7 +1,8 @@
 {
-  "name": "pjson",
+  "name": "prettyj",
   "version": "1.0.0",
   "description": "",
+  "bin": {"prettyj": "./index.js"},
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

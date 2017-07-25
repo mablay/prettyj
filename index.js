@@ -1,3 +1,17 @@
-const arg = process.argv.shift();
+var stdin = process.openStdin();
 
-console.log('arg: %s', arg);
+var data = "";
+
+stdin.on('data', function(chunk) {
+    data += chunk;
+});
+
+stdin.on('end', function() {
+    try {
+        var json = JSON.parse(data);
+        var out = JSON.stringify(json, null, 4);
+        console.log(out);
+    } catch (err) {
+        console.error(err);
+    }
+});
