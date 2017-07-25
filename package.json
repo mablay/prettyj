@@ -1,13 +1,16 @@
 {
   "name": "prettyj",
-  "version": "1.0.4",
-  "description": "",
+  "version": "1.1.0",
+  "description": "Command line JSON formatter. JSON piped to 'prettyj' is pretty-transformed and written to stdout.",
   "bin": "./index.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "pp": "cat ./package.json | node ./index.js",
+    "test": "./test/test.sh"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {}
+  "keywords": ["json", "pretty", "prettify", "bash", "shell", "cli", "pipe", "format"],
+  "author": "Marc Ablay",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {}
 }

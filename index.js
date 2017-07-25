@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+console.log(process.argv);
+
 var stdin = process.openStdin();
 
 var data = "";
@@ -10,11 +12,9 @@ stdin.on('data', function(chunk) {
 
 stdin.on('end', function() {
     try {
-        var line = data.split('\n').join('');
-        var json = JSON.parse(line);
-        var out = JSON.stringify(json, null, 4);
-        console.log(out);
+        console.log(JSON.stringify(JSON.parse(data.split('\n').join('')), null, 4));
     } catch (err) {
         console.error(err);
     }
 });
+
