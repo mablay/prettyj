@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 
-console.log(process.argv);
-
 var stdin = process.openStdin();
 
 var data = "";
