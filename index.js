@@ -10,6 +10,7 @@ stdin.on('data', function(chunk) {
 
 stdin.on('end', function() {
     try {
+        data = data.split('\n').join(' ');
         var json = JSON.parse(data);
         var out = JSON.stringify(json, null, 4);
         console.log(out);
